@@ -48,3 +48,11 @@ img {
     display: block;
     margin: 1.25em auto;
 }
+
+.date{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--light-yellow);
+}
