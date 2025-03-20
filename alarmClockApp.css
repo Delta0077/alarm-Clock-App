@@ -43,3 +43,8 @@ button {
     border: 1px solid var(--light-yellow);
     margin-top: 1em;
 }
+
+img {
+    display: block;
+    margin: 1.25em auto;
+}
