@@ -4,6 +4,8 @@
     --light-yellow: #FFB200;
     --dark-blue: #243356;
     --light-blue: #3A506B;
+    --dark-violet: #69247C;
+    --light-pink: #DA498D;
     --white: #fff;
 }
 
@@ -12,7 +14,7 @@
     max-width: 440px;
     width: 100%;
     padding: 1.875em;
-    background: var(--light-blue);
+    background: var(--dark-violet);
     color: var(--white);
     border-radius: 1em;
     margin: 1.5em auto;
@@ -55,4 +57,12 @@ img {
     font-size: 2rem;
     font-weight: 500;
     color: var(--light-yellow);
+}
+
+.custom-label {
+    color: var(--);
+}
+
+.custom-select {
+    color: var(--dark-blue);
 }
