@@ -1,8 +1,12 @@
 import { LightningElement } from 'lwc';
 import AlarmClockAssets from '@salesforce/resourceUrl/AlarmClockAssets';
 export default class AlarmClockApp extends LightningElement {
+
+    // Impotrting the static resource
     clcockImage = AlarmClockAssets + '/alarmClock.png';
+
     currentTime = "";
+    fullDate = "";
     connectedCallback() {
         this.CurrentTimeHandler();
 
