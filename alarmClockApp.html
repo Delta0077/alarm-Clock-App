@@ -6,13 +6,50 @@
         <h2>{currentTime}</h2>
         <div class="slds-grid slds-gutters">
             <div class="slds-col">
-                <span>Hours</span>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label custom-label" for="select-hour">Hour(s)</label>
+                    <div class="slds-form-element__control">
+                    <div class="slds-select_container">
+                    <select class="slds-select custom-select" id="select-hour">
+                    <option value="">Select…</option>
+                    <template for:each={hours} for:item="hours">
+                        <option key={hours} value={hours}>{hours}</option>
+                    </template>
+                    </select>
+                    </div>
+                    </div>
+                    </div>
             </div>
             <div class="slds-col">
-                <span>Minutes</span>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label custom-label" for="select-minute">Minute(s)</label>
+                    <div class="slds-form-element__control">
+                    <div class="slds-select_container">
+                    <select class="slds-select custom-select" id="select-minute">
+                    <option value="">Select…</option>
+                    <template for:each={minutes} for:item="minute">
+                        <option key={minute} value={minute}>{minute}</option>
+                    </template>
+                    </select>
+                    </div>
+                    </div>
+                    </div>
             </div>
             <div class="slds-col">
-                <span>AM/PM</span>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label custom-label" for="select-AmPm">AM/PM</label>
+                    <div class="slds-form-element__control">
+                    <div class="slds-select_container">
+                    <select class="slds-select custom-select" id="select-AmPm">
+                    <option value="">Select…</option>
+                    <template for:each={meridians} for:item="meridian">
+                        <option key={meridian} value={meridian}>{meridian}</option>
+                    </template>
+                    
+                    </select>
+                    </div>
+                    </div>
+                    </div>
             </div>
             </div>
             <button class="slds-button slds-button_neutral slds-button_stretch" disabled="">Set Alarm</button>
