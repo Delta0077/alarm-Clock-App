@@ -5,10 +5,15 @@ export default class AlarmClockApp extends LightningElement {
     // Impotrting the static resource
     clcockImage = AlarmClockAssets + '/alarmClock.png';
 
+    hours = [];
+    minutes = [];
+    meridians = ["AM", "PM"];
     currentTime = "";
     fullDate = "";
     connectedCallback() {
         this.CurrentTimeHandler();
+        this.createHoursOptions();
+        this.createMinutesOptions();
 
         let date = new Date();
         let day = date.getDate();
@@ -43,5 +48,18 @@ export default class AlarmClockApp extends LightningElement {
         this.currentTime = `${hours} : ${minutes} : ${seconds} ${AmPm}`
         }, 1000)
         
+    }
+    createHoursOptions() {
+        for(let i=1; i<=12; i++) {
+            let value = i < 10 ? "0" + i : i;
+            this.hours.push(value);
+        }
+    }
+
+    createMinutesOptions() {
+        for(let i=0; i<=59; i++) {
+            let value = i < 10 ? "0" + i : i;
+            this.minutes.push(value);
+        }
     }
 }
